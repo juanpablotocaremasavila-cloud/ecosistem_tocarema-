@@ -26,13 +26,7 @@ const EquiposModel = db.define('equipos', {
   },
   id_cuentadante: { 
     type: DataTypes.INTEGER,
-    allowNull: true,
-    references: {
-      model: 'cuentadantes',          // nombre de la tabla (tal como está en la BD)
-      key: 'id_cuentadante'           // campo PK de usuarios
-    },
-    onDelete: 'SET NULL',         // si borran usuario → null
-    onUpdate: 'CASCADE'
+    allowNull: true
   },
   observaciones: { 
     type: DataTypes.TEXT,
@@ -50,7 +44,7 @@ const EquiposModel = db.define('equipos', {
   },
 }, {
   freezeTableName: true,
-  timestamps: true,
+  timestamps: false,
 });
 
 export default EquiposModel;

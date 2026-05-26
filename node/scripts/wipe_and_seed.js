@@ -103,8 +103,8 @@ async function run() {
     console.log("🔧 Creando 10 Equipos en el inventario...");
     for (const eq of mockEquipos) {
       const [result] = await db.query(
-        `INSERT INTO equipos (grupo_equipo, nom_equipo, marca_equipo, no_placa, id_cuentadante, estado, createdAt, updatedAt) 
-         VALUES (?, ?, ?, ?, ?, 1, NOW(), NOW());`,
+        `INSERT INTO equipos (grupo_equipo, nom_equipo, marca_equipo, no_placa, id_cuentadante, estado) 
+         VALUES (?, ?, ?, ?, ?, 1);`,
         { replacements: [eq.grupo, eq.nom, eq.marca, eq.placa, id_cuentadante] }
       );
       
