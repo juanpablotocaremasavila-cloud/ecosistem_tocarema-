@@ -1,0 +1,13 @@
+{
+  "name": "ecosystem-adso",
+  "version": "1.0.0",
+  "description": "Ecosystem ADSO deployment",
+  "main": "node/app.js",
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build",
+    "start": "cd node && npm install && node app.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

@@ -99,8 +99,18 @@ app.use('/api/password-reset', passwordResetRoutes);
 app.use('/api/config', configRoutes);
 app.use('/api/auditoria', logRoutes);
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
     res.send('Bienvenido a la API de Equipos - Laboratorio Ambiental');
+});
+
+// =============================
+// 🔥 SERVIR FRONTEND
+// =============================
+const frontendDistPath = path.resolve(__dirname, '../frontend/dist');
+app.use(express.static(frontendDistPath));
+
+app.get(/^.*$/, (req, res) => {
+    res.sendFile(path.join(frontendDistPath, 'index.html'));
 });
 
 // =============================

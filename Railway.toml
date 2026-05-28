@@ -1,0 +1,8 @@
+[build]
+builder = "NIXPACKS"
+watchPatterns = ["node/**"]
+
+[deploy]
+startCommand = "cd node && npm install && npm start"
+healthcheckPath = "/"
+restartPolicyType = "ON_FAILURE"
