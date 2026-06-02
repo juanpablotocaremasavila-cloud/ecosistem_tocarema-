@@ -26,20 +26,27 @@ if (!loaded) {
     dotenv.config();
 }
 
-const db = new Sequelize(
-    process.env.DB_NAME || process.env.MYSQL_ADDON_DB || 'b0py2ume77nsk8dp10gz',
-    process.env.DB_USER || process.env.MYSQL_ADDON_USER || 'utjsesrlthfz0w06',
-    process.env.DB_PASSWORD || process.env.MYSQL_ADDON_PASSWORD || '5MPAVxyGFrU29AKQAkWw', 
-    {
-        host: process.env.DB_HOST || process.env.MYSQL_ADDON_HOST || 'b0py2ume77nsk8dp10gz-mysql.services.clever-cloud.com',
-        port: process.env.DB_PORT || process.env.MYSQL_ADDON_PORT || 3306,
+const dbUri = process.env.MYSQL_ADDON_URI || process.env.DATABASE_URL;
+
+let db;
+
+if (dbUri) {
+    db = new Sequelize(dbUri, {
         dialect: 'mysql',
-        dialectOptions: process.env.DB_HOST && process.env.DB_HOST !== 'localhost' ? {
-            ssl: {
-                require: true,
-                rejectUnauthorized: false
-            }
-        } : {},    }
-);
+        logging: false
+    });
+} else {
+    db = new Sequelize(
+        process.env.DB_NAME || process.env.MYSQL_ADDON_DB || 'b0py2ume77nsk8dp10gz',
+        process.env.DB_USER || process.env.MYSQL_ADDON_USER || 'utjsesrlthfz0w06',
+        process.env.DB_PASSWORD || process.env.MYSQL_ADDON_PASSWORD || '5MPAVxyGFrU29AKQAkWw', 
+        {
+            host: process.env.DB_HOST || process.env.MYSQL_ADDON_HOST || 'b0py2ume77nsk8dp10gz-mysql.services.clever-cloud.com',
+            port: process.env.DB_PORT || process.env.MYSQL_ADDON_PORT || 3306,
+            dialect: 'mysql',
+            logging: false
+        }
+    );
+}
 
 export default db;
