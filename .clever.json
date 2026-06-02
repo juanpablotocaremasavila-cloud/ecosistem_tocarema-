@@ -1,0 +1,12 @@
+{
+  "apps": [
+    {
+      "app_id": "app_fab54542-5aea-4bb3-ba23-e95350ce5d8e",
+      "org_id": "user_7ec56371-aae3-4572-a18c-9d50278b0788",
+      "deploy_url": "https://github.com/jrcrifc/Ecosystem-ADSO.git",
+      "git_ssh_url": "https://github.com/jrcrifc/Ecosystem-ADSO.git",
+      "name": "Ecosystem-ADSO",
+      "alias": "Ecosystem-ADSO"
+    }
+  ]
+}

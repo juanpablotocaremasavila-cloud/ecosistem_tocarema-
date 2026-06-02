@@ -27,14 +27,14 @@ if (!loaded) {
 }
 
 const db = new Sequelize(
-    process.env.DB_NAME || 'ecosystem',
-    process.env.DB_USER || 'root',
-    process.env.DB_PASSWORD || '', 
+    process.env.DB_NAME || process.env.MYSQL_ADDON_DB || 'bszqtbaswf3bikfeiph4',
+    process.env.DB_USER || process.env.MYSQL_ADDON_USER || 'ueub8gpermio6wet',
+    process.env.DB_PASSWORD || process.env.MYSQL_ADDON_PASSWORD || 'iT8LN2JuVkWdUgrNDy0T', 
     {
-        host: process.env.DB_HOST || 'localhost',
-        port: process.env.DB_PORT || 3306,
+        host: process.env.DB_HOST || process.env.MYSQL_ADDON_HOST || 'bszqtbaswf3bikfeiph4-mysql.services.clever-cloud.com',
+        port: process.env.DB_PORT || process.env.MYSQL_ADDON_PORT || 3306,
         dialect: 'mysql',
-        dialectOptions: process.env.DB_HOST && process.env.DB_HOST !== 'localhost' ? {
+        dialectOptions: (process.env.DB_HOST && process.env.DB_HOST !== 'localhost') || process.env.MYSQL_ADDON_HOST || 'bszqtbaswf3bikfeiph4' ? {
             ssl: {
                 require: true,
                 rejectUnauthorized: false
