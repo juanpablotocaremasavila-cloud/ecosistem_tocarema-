@@ -34,13 +34,12 @@ const db = new Sequelize(
         host: process.env.DB_HOST || process.env.MYSQL_ADDON_HOST || 'b0py2ume77nsk8dp10gz-mysql.services.clever-cloud.com',
         port: process.env.DB_PORT || process.env.MYSQL_ADDON_PORT || 3306,
         dialect: 'mysql',
-        dialectOptions: (process.env.DB_HOST && process.env.DB_HOST !== 'localhost') || process.env.MYSQL_ADDON_HOST || 'b0py2ume77nsk8dp10gz' ? {
+        dialectOptions: process.env.DB_HOST && process.env.DB_HOST !== 'localhost' ? {
             ssl: {
                 require: true,
                 rejectUnauthorized: false
             }
-        } : {}
-    }
+        } : {},    }
 );
 
 export default db;
