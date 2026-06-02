@@ -1,12 +1,12 @@
 {
   "apps": [
     {
-      "app_id": "app_fab54542-5aea-4bb3-ba23-e95350ce5d8e",
-      "org_id": "user_7ec56371-aae3-4572-a18c-9d50278b0788",
-      "deploy_url": "https://github.com/jrcrifc/Ecosystem-ADSO.git",
-      "git_ssh_url": "https://github.com/jrcrifc/Ecosystem-ADSO.git",
-      "name": "Ecosystem-ADSO",
-      "alias": "Ecosystem-ADSO"
+      "app_id": "app_52e79123-a842-4968-bbdb-72e3a90ee10b",
+      "org_id": "user_5400cf15-2cbe-491a-a8d5-1657be85f719",
+      "deploy_url": "https://github.com/juanpablotocaremasavila-cloud/ecosistem_tocarema-.git",
+      "git_ssh_url": "https://github.com/juanpablotocaremasavila-cloud/ecosistem_tocarema-.git",
+      "name": "TOCAREMA",
+      "alias": "TOCAREMA"
     }
   ]
 }
