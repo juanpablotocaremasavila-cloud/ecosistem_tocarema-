@@ -5,7 +5,8 @@
   "type": "module",
   "main": "node/app.js",
   "scripts": {
-    "preinstall": "cd node && npm install",
+    "postinstall": "cd node && npm install && cd ../frontend && npm install",
+    "build": "cd node && node syncDatabase.js && cd ../frontend && npm run build",
     "start": "cd node && node app.js",
     "dev": "cd node && node app.js"
   },
