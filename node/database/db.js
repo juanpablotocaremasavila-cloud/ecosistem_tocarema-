@@ -26,7 +26,7 @@ if (!loaded) {
     dotenv.config();
 }
 
-const dbUri = process.env.MYSQL_ADDON_URI || process.env.DATABASE_URL;
+const dbUri = process.env.CUSTOM_DB_URI || process.env.MYSQL_ADDON_URI || process.env.DATABASE_URL;
 
 let db;
 

@@ -1,11 +1,11 @@
 {
   "apps": [
     {
-      "app_id": "app_52e79123-a842-4968-bbdb-72e3a90ee10b",
-      "org_id": "user_5400cf15-2cbe-491a-a8d5-1657be85f719",
-      "deploy_url": "https://github.com/juanpablotocaremasavila-cloud/ecosistem_tocarema-.git",
-      "git_ssh_url": "https://github.com/juanpablotocaremasavila-cloud/ecosistem_tocarema-.git",
-      "name": "TOCAREMA",
+      "app_id": "app_102d9015-719e-459a-8b30-c332b95276e7",
+      "org_id": "user_7ec56371-aae3-4572-a18c-9d50278b0788",
+      "deploy_url": "https://push-n3-par-clevercloud-customers.services.clever-cloud.com/app_102d9015-719e-459a-8b30-c332b95276e7.git",
+      "git_ssh_url": "git+ssh://git@push-n3-par-clevercloud-customers.services.clever-cloud.com/app_102d9015-719e-459a-8b30-c332b95276e7.git",
+      "name": "ecositem",
       "alias": "TOCAREMA"
     }
   ]
